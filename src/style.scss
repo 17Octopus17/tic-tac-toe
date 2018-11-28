@@ -1,0 +1,34 @@
+.game-title {
+  text-align: center;
+  font-family: monospace;
+}
+
+.message {
+  padding-top: 20px;
+  text-align: center;
+  font-family: monospace;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: repeat(3, 33%);
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  text-align: center;
+  cursor: pointer;
+}
+
+.block {
+  border: 1px solid black;
+}
+
+.bottom {
+  text-align: center;
+  margin: 20px;
+  &__restart {
+    cursor: pointer;
+    font-family: monospace;
+  }
+}
