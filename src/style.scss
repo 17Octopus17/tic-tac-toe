@@ -1,12 +1,20 @@
+$font: monospace;
+@mixin message ($size: 30px, $top: 10px, $text: center, $font: monospace) {
+  font-size: $size;
+  padding-top: $top;
+  text-align: $text;
+  font-family: $font;
+}
+
 .game-title {
+  font-size: 40px;
   text-align: center;
-  font-family: monospace;
+  font-family: $font;
+  margin: 0;
 }
 
 .message {
-  padding-top: 20px;
-  text-align: center;
-  font-family: monospace;
+  @include message;
 }
 
 .container {
@@ -22,13 +30,28 @@
 
 .block {
   border: 1px solid black;
+  font-size: 80px;
+
+}
+
+.cell:hover {
+  background-color: blue;
 }
 
 .bottom {
   text-align: center;
   margin: 20px;
+  
   &__restart {
     cursor: pointer;
-    font-family: monospace;
+    font-family: $font;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
   }
+}
+
+.win-message {
+  @include message;
+  color: blue;
 }
